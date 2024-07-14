@@ -1,0 +1,86 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff; /* Button color */
+  z-index: 1; /* Ensure the buttons appear above other content */
+}
+
+.prev-btn {
+  left: 3vw; /* Adjust as needed */
+}
+
+.next-btn {
+  right: 3vw; /* Adjust as needed */
+}
+
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  transition: transform 0.3s ease-in-out; /* Transition for slide animation */
+}
+
+.carousel-slide.active {
+  display: block;
+  transition: transform 0.3s ease-in-out; /* Transition for slide animation */
+}
+
+.carousel-image {
+  transition: ease-in-out;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc; /* Inactive indicator color */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333; /* Active indicator color */
+}
